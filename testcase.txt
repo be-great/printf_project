@@ -61,7 +61,15 @@ printf("'c' testcase => char : %%\n", "100");
 printf("'None valid after %' testcase => char : %\n");
 printf("'None valid after %' testcase => char : '%'");
 printf("'None valid after %' testcase => char : '%%%'\n");
-
+#### string 
+# specifier : %s => string 
+# declare : char s[10]="fdfd"; char *s; s= malloc(sizeof(char)*10);
+- testing symbol
+printf("'s' testcase => string : %s\n", "hello");
+- testing failure
+char s[] = "best";
+printf("'s' testcase => string : %s\n",s);
+printf("'s' testcase => string : %s\n",s[0]);
 
 ################### Length test %d,%i, %%, %c and normal string ###############################
 	printf("### printf :- \n");

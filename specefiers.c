@@ -15,7 +15,11 @@ int specefier_handle(char specifier, const char *format, int *i, char buffer[], 
         case '%':
             count = print_precentage(format, i, buffer, buffer_ind);
             return (count);
-        default:
+	case 's':
+	    count = print_string(format, i, buffer, buffer_ind, args);
+
+	    return (count);
+	default:
 	    count = print_unknowchar(format, i, buffer, buffer_ind); 
             return (count);
     }
@@ -60,6 +64,17 @@ int print_precentage(const char *format, int *i, char buffer[], int *buffer_ind)
 	return (1);
 }
 
+int print_string(const char *format, int *i, char buffer[], int *buffer_ind, va_list args)
+{
+	char *s0;
+	int count = 0, j;
+	s0 = va_arg(args, char*);
+
+	printf("%s\n", s0);
+
+	return count;
+
+}
 int print_unknowchar(const char *format, int *i, char buffer[], int *buffer_ind)
 {
 	handler_buffer('%', buffer, buffer_ind);

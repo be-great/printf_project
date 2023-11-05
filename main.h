@@ -12,6 +12,7 @@ char buffer[1024];
 int print_char(const char *format, int *i, char buffer[], int *buffer_ind, va_list args);
 int print_integer(const char *format, int *i, char buffer[], int *buffer_ind, va_list args);
 int print_precentage(const char *format, int *i, char buffer[], int *buffer_ind);
+int print_string(const char *format, int *i, char buffer[], int *buffer_ind, va_list args);
 int print_unknowchar(const char *format, int *i, char buffer[], int *buffer_ind);
 int specefier_handle(char specifier,const char *format, int *i, char buffer[], int *buffer_ind, va_list args);
 
