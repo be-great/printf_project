@@ -1,0 +1,66 @@
+#### digit 
+# specificer : %d, %i => signed decimal integer
+# declare : int num; # value range : - and + 
+- testing symbol with positve and negative value
+printf("'d' testcase => num : %d\n", 100);
+printf("'d' testcase => num : %d\n", -100);
+printf("'i' testcase => num : %i\n", 100);
+printf("'i' testcase => num : %i\n", -100);
+- testing failure 
+ A) floating number
+
+printf("'d' testcase => num : %d\n", 100.10);
+printf("'d' testcase => num : %d\n", -100.10);
+printf("'i' testcase => num : %i\n", 100.10);
+printf("'i' testcase => num : %i\n", 100.10);
+ B) character value
+printf("'d' testcase => num : %d\n", 'c');
+printf("'d' testcase => num : %d\n", c);
+printf("'i' testcase => num : %i\n", 'c');
+printf("'i' testcase => num : %i\n", c);
+
+ c) string value
+
+printf("'d' testcase => num : %d\n", "test");
+printf("'d' testcase => num : %d\n", "t");
+printf("'i' testcase => num : %i\n", "test");
+printf("'i' testcase => num : %i\n", "t");
+
+------
+#### character 
+# specificer : %c => character
+# declare : char ch = 'c';
+- testing symbol
+printf("'c' testcase => char : %c\n", 'c');
+- testing failure
+ A) interger
+printf("'c' testcase => char : %c\n", 100);
+printf("'d' testcase => num : %d\n", -100);
+ B) float number
+printf("'c' testcase => char : %c\n", 100.10);
+printf("'c' testcase => char : %c\n", -100.10);
+ C) character
+printf("'c' testcase => char : %c\n", 'c');
+printf("'c' testcase => char : %c\n", c);
+ D) string
+printf("'c' testcase => char : %c\n", "test");
+printf("'c' testcase => char : %c\n", "t");
+
+------
+#### precentage
+# specificer : %% => noname
+# declare : None on the string it self
+- testing symbol 
+printf("'%' testcase => char : %%\n");
+- testing failure
+A) give argument with it
+printf("'c' testcase => char : %%\n", "100");
+------
+#### unknow speceifier
+- testing randomaly 
+printf("'None valid after %' testcase => char : %\n");
+printf("'None valid after %' testcase => char : '%'");
+printf("'None valid after %' testcase => char : '%%%'\n");
+
+
+
